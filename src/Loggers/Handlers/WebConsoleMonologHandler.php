@@ -14,7 +14,7 @@ class WebConsoleMonologHandler extends AbstractProcessingHandler
 		parent::__construct($level, $bubble);
 	}
 
-	protected function write(LogRecord $record): void
+	protected function write($record): void
 	{
 		if (DebugConsole::$initialized)
 		{
