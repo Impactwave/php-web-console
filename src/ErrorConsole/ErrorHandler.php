@@ -13,8 +13,8 @@ class ErrorHandler
   private static $nextErrorHandler;
   private static $nextExceptionHandler;
 
-  public static function globalErrorHandler ($errno, $errstr, $errfile, $errline, $errcontext)
-  {
+  public static function globalErrorHandler($errno, $errstr, $errfile, $errline, $errcontext = null)
+	{
     if (!error_reporting ()) {
       if (PHP_MAJOR_VERSION >= 7)
         error_clear_last ();
