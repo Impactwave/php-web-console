@@ -126,7 +126,7 @@ class Debug
    */
   public static function libraryNamespace ()
   {
-    $c = explode ('\\', get_class ());
+    $c = explode ('\\', Debug::class);
     array_pop ($c);
     return implode ('\\', $c);
   }
